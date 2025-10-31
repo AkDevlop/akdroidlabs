@@ -25,6 +25,10 @@
       color: #3F51B5;
       text-align: center;
     }
+    h2 {
+      color: #333;
+      margin-top: 30px;
+    }
     a {
       color: #3F51B5;
       text-decoration: none;
@@ -43,65 +47,85 @@
 <body>
   <div class="container">
     <h1>Privacy Policy</h1>
+    <p><strong>Last Updated:</strong> November 1, 2025</p>
 
-    <p>This privacy policy applies to the QuotelyAI app  for mobile devices that was created by AKDroid Labs  as an Ad Supported service. This service is intended for use "AS IS".</p>
+    <p>This Privacy Policy describes how <strong>AKDroid Labs</strong> (“we”, “our”, or “us”) collects, uses, and protects your information when you use the <strong>QuotelyAI</strong> mobile application (“the App”). By using this App, you agree to the collection and use of information in accordance with this policy.</p>
 
-    <h2>Information Collection and Use</h2>
-    <p>The Application collects information when you download and use it. This information may include:</p>
+    <h2>1. Overview of App Features</h2>
+    <p>QuotelyAI allows users to view, save, customize, and share motivational and creative quotes. It includes:</p>
     <ul>
-      <li>Your device's Internet Protocol address (e.g. IP address)</li>
-      <li>The pages of the Application that you visit, the time and date of your visit, and the time spent on those pages</li>
-      <li>The operating system you use on your mobile device</li>
-    </ul>
-    <p>The Application does not gather precise information about the location of your mobile device.</p>
-
-    <h2>Third Party Access</h2>
-    <p>The Service Provider may use third-party services that collect information used to identify you. These include:</p>
-    <ul>
-      <li><a href="https://www.google.com/policies/privacy/" target="_blank">Google Play Services</a></li>
-      <li><a href="https://support.google.com/admob/answer/6128543" target="_blank">AdMob</a></li>
-      <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Analytics</a></li>
-      <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Crashlytics</a></li>
+      <li>Login using Email or Google (via Firebase Authentication)</li>
+      <li>Profile section showing your name and Google profile picture</li>
+      <li>Predefined quotes organized by category (stored locally)</li>
+      <li>Ability to generate AI quotes via Google’s Gemini API (Vertex AI)</li>
+      <li>Customization of quote cards with personal images and text</li>
+      <li>Daily quote notifications using Notification Manager</li>
     </ul>
 
-    <h2>AI Quote Generation (Gemini API)</h2>
-    <p>
-      The Application uses Google's <strong>Gemini API</strong> to generate AI-based motivational and creative quotes.
-      When you use features like "Generate Quote", your entered text (prompt) is securely transmitted to Google servers
-      for processing by the Gemini API, and a generated response is returned to your device.
-    </p>
+    <h2>2. Information We Collect</h2>
+    <p>We collect and process only limited information necessary to operate our services:</p>
+    <ul>
+      <li><strong>Account Information:</strong> When you sign in using Google or Email, we receive your display name, email address, and profile photo via Firebase Authentication.</li>
+      <li><strong>Usage Data:</strong> Includes general app usage, such as app version, session duration, and interactions (like, share, save actions).</li>
+      <li><strong>Device Information:</strong> Such as device type, Android version, and general diagnostic logs for crash analytics.</li>
+    </ul>
+    <p><em>We do not collect or store passwords, contact lists, or precise location data.</em></p>
 
-    <p>
-      The Service Provider does not store or log any user-entered prompts or generated responses on its own servers.
-      All data exchanged with Gemini API is handled according to 
-      <a href="https://ai.google.dev/terms" target="_blank" rel="noopener noreferrer">Google AI Terms of Service</a>
-      and 
+    <h2>3. AI Quote Generation (Gemini API via Vertex AI)</h2>
+    <p>The App uses Google Cloud’s <strong>Gemini API</strong> to generate AI-based quotes. When you use the “Generate Quote” feature:</p>
+    <ul>
+      <li>Your entered prompt text is securely transmitted to our Cloud Run backend (hosted on Google Cloud).</li>
+      <li>Our backend authenticates with Gemini API via a Google-managed Service Account.</li>
+      <li>We do not store your prompt or the generated quote on any of our servers.</li>
+    </ul>
+    <p>All AI requests and responses are handled in compliance with
+      <a href="https://ai.google.dev/terms" target="_blank" rel="noopener noreferrer">Google AI Terms of Service</a> and
       <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.
     </p>
 
-    <p>
-      The Gemini API may temporarily log data to improve the quality and reliability of AI models, as stated in
-      Google’s official documentation. However, AKDroid Labs and the QuotelyAI Application do not have access
-      to your Gemini API interaction history.
-    </p>
+    <h2>4. Local Storage and Permissions</h2>
+    <p>The App may request the following permissions for its core functionality:</p>
+    <ul>
+      <li><strong>Storage (Read/Write):</strong> Required to select images from your gallery or to save customized quote cards to your device.</li>
+      <li><strong>Notification Permission:</strong> Used to deliver daily motivational quote notifications to your device.</li>
+      <li><strong>Internet Access:</strong> Required to fetch AI-generated quotes and online images from Pixabay.</li>
+    </ul>
+    <p>All images used in predefined quote cards are royalty-free and sourced from <a href="https://pixabay.com/" target="_blank">Pixabay</a>.</p>
 
-    <h2>Opt-Out Rights</h2>
-    <p>You can stop all collection of information by uninstalling the app. You may use standard uninstall processes available on your device.</p>
+    <h2>5. Third-Party Services</h2>
+    <p>The App integrates with trusted third-party services to provide a seamless experience:</p>
+    <ul>
+      <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Authentication</a> – User login and identity management</li>
+      <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Realtime Database</a> – Storing minimal user preferences or app data</li>
+      <li><a href="https://ai.google.dev/terms" target="_blank">Google Vertex AI (Gemini)</a> – AI quote generation</li>
+      <li><a href="https://pixabay.com/service/privacy/" target="_blank">Pixabay</a> – For fetching background images</li>
+    </ul>
 
-    <h2>Data Retention Policy</h2>
-    <p>The Service Provider will retain user-provided data for as long as you use the Application and for a reasonable time thereafter. For data deletion requests, contact us at <a href="mailto:quotelyai.team@gmail.com">quotelyai.team@gmail.com</a>.</p>
+    <h2>6. Data Retention and User Control</h2>
+    <ul>
+      <li>Your basic profile data (name, email, photo) remains stored within Firebase as long as your account exists.</li>
+      <li>You can delete your account or data by contacting <a href="mailto:quotelyai.team@gmail.com">quotelyai.team@gmail.com</a>.</li>
+      <li>AI prompts and generated responses are not stored by us; they are processed transiently through Google’s servers.</li>
+    </ul>
 
-    <h2>Children</h2>
-    <p>This app is not intended for children under 13. If you are aware that your child has provided personal information, contact us immediately at <a href="mailto:quotelyai.team@gmail.com">quotelyai.team@gmail.com</a>.</p>
+    <h2>7. Security Measures</h2>
+    <p>We follow industry-standard security practices:</p>
+    <ul>
+      <li>All network communication uses HTTPS encryption.</li>
+      <li>Firebase and Google Cloud securely manage all authentication and access control.</li>
+      <li>No sensitive data is shared with unauthorized third parties.</li>
+    </ul>
 
-    <h2>Security</h2>
-    <p>The Service Provider takes reasonable measures to protect your data from unauthorized access or disclosure.</p>
+    <h2>8. Children’s Privacy</h2>
+    <p>The App is not intended for children under the age of 13. We do not knowingly collect personal data from minors. If you believe your child has provided personal information, please contact us immediately for removal.</p>
 
-    <h2>Changes</h2>
-    <p>This Privacy Policy may be updated periodically. You are advised to review this page regularly for updates.</p>
+    <h2>9. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy periodically to reflect changes in our practices or for legal reasons. You are advised to check this page regularly for any updates. Continued use of the App after any changes constitutes your acceptance of the revised policy.</p>
 
-    <h2>Contact Us</h2>
-    <p>For questions about privacy, contact: <a href="mailto:quotelyai.team@gmail.com">quotelyai.team@gmail.com</a></p>
+    <h2>10. Contact Us</h2>
+    <p>If you have any questions or concerns regarding this Privacy Policy, please contact us at:</p>
+    <p><a href="mailto:quotelyai.team@gmail.com">quotelyai.team@gmail.com</a></p>
+
   </div>
 
   <footer>
