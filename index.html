@@ -3,116 +3,55 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>AKDroid Labs — Mobile & Android Apps</title>
-  <meta name="description" content="AKDroid Labs — Android apps, utilities and creative mobile experiences. Official site for APKs, docs and privacy policies." />
+  <title>AKDroid Labs — Policies</title>
+  <meta name="description" content="AKDroid Labs — Official policy links for QuotelyAI." />
   <style>
     :root{
-      --bg:#f6f8fb; --card:#ffffff; --accent:#4a00e0; --accent2:#8e2de2; --muted:#6b7280;
-      --maxw:980px;
+      --bg:#f6f8fb; --card:#ffffff; --accent:#3F51B5; --muted:#6b7280;
     }
+    *{box-sizing:border-box}
     html,body{height:100%}
     body{
-      margin:0; font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background:linear-gradient(180deg,#fafafa,#f2f4f8); color:#111827;
+      margin:0; font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background:linear-gradient(180deg,#fafafa,#f2f4f8);
+      color:#111827; display:flex; align-items:center; justify-content:center; padding:24px;
       -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
-      display:flex; align-items:center; justify-content:center; padding:36px;
     }
-    .wrap{width:100%; max-width:var(--maxw);}
-    header{display:flex; align-items:center; gap:16px;}
-    .logo{
-      width:64px; height:64px; border-radius:12px;
-      background:linear-gradient(135deg,var(--accent),var(--accent2));
-      display:flex; align-items:center; justify-content:center; color:white; font-weight:700; font-size:20px;
-      box-shadow:0 6px 20px rgba(138,43,226,0.12);
+    .wrap{
+      width:100%; max-width:720px; background:var(--card); border-radius:14px; padding:28px;
+      box-shadow:0 10px 30px rgba(16,24,40,.08); text-align:center;
     }
-    .brand h1{margin:0; font-size:20px; letter-spacing:-0.2px;}
-    .brand p{margin:0; margin-top:4px; color:var(--muted); font-size:13px;}
-
-    .hero{
-      margin-top:22px; display:flex; gap:28px; flex-wrap:wrap; align-items:center;
-      background:var(--card); border-radius:12px; padding:24px; box-shadow:0 6px 18px rgba(16,24,40,0.06);
+    h1{margin:0 0 8px; color:var(--accent); font-size:22px; letter-spacing:-.2px;}
+    p.lead{margin:0; color:var(--muted); font-size:14px;}
+    .links{display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin-top:22px;}
+    a.btn{
+      display:inline-block; padding:12px 16px; border-radius:10px; text-decoration:none; font-weight:600; font-size:14px;
+      border:1px solid #e6e9ef; color:var(--accent); background:#fff;
     }
-
-    .left{flex:1 1 320px; min-width:260px;}
-    .right{width:260px; display:flex; flex-direction:column; gap:10px; align-items:center;}
-
-    .h-title{font-size:20px; margin:0 0 8px 0; color:#0f172a;}
-    .h-lead{color:var(--muted); margin:0 0 18px 0; line-height:1.45;}
-
-    .btn-row{display:flex; gap:10px; flex-wrap:wrap;}
-    .btn{
-      padding:10px 14px; border-radius:10px; text-decoration:none; font-weight:600; font-size:14px;
-      display:inline-flex; align-items:center; gap:8px;
+    a.btn.primary{
+      background:var(--accent); color:#fff; border-color:var(--accent);
     }
-    .btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent2)); color:white; box-shadow:0 6px 18px rgba(138,43,226,0.18);}
-    .btn-outline{border:1px solid #e6e9ef; color:var(--accent2); background:transparent; }
-
-    .cards{display:flex; gap:12px; margin-top:18px; flex-wrap:wrap;}
-    .card{flex:1 1 180px; min-width:160px; background:#fcfdff; padding:12px; border-radius:10px; border:1px solid #f0f3f8;}
-    .card h3{margin:0; font-size:14px;}
-    .card p{margin:6px 0 0 0; color:var(--muted); font-size:13px;}
-
-    footer{margin-top:18px; color:var(--muted); font-size:13px; display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap;}
-    a{color:inherit}
-    .link{color:var(--accent2); text-decoration:none; font-weight:600}
-    @media (max-width:720px){
-      .right{width:100%}
-      body{padding:18px}
-    }
+    footer{margin-top:18px; color:var(--muted); font-size:12px;}
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div class="logo">AK</div>
-      <div class="brand">
-        <h1>AKDroid Labs</h1>
-        <p>Android-first apps · UI-focused · Privacy-ready</p>
-      </div>
-    </header>
+  <main class="wrap" role="main" aria-label="AKDroid Labs policy links">
+    <h1>AKDroid Labs</h1>
+    <p class="lead">Official links for QuotelyAI policies</p>
 
-    <section class="hero" role="region" aria-label="AKDroid Labs hero">
-      <div class="left">
-        <h2 class="h-title">Beautiful Android apps that users love</h2>
-        <p class="h-lead">We build utility and entertainment apps with a strong focus on UX, light weight size, and privacy. Discover our apps, read the privacy policy, or reach out to request a partnership.</p>
-
-        <div class="btn-row">
-          <a class="btn btn-primary" href="./privacy-policy.html" title="Privacy Policy">Privacy Policy</a>
-          <a class="btn btn-outline" href="./terms-and-conditions.html" title="Terms &amp; Conditions">Terms &amp; Conditions</a>
-          <a class="btn btn-outline" href="https://github.com/akdevlop/akdroidlabs" target="_blank" rel="noopener noreferrer">GitHub</a>
-        </div>
-
-        <div class="cards" aria-hidden="false">
-          <div class="card">
-            <h3>QuotelyAI (example)</h3>
-            <p>AI-powered quote generator — favorites, customize and daily motivation notifications.</p>
-          </div>
-          <div class="card">
-            <h3>Ad-friendly & privacy-minded</h3>
-            <p>Prepared privacy & T&C pages and optional AdMob placeholders for future monetization.</p>
-          </div>
-          <div class="card">
-            <h3>Small, maintainable code</h3>
-            <p>Room DB seed, Hilt DI, WorkManager for daily jobs — production-ready foundations.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="right" aria-hidden="true">
-        <img src="https://raw.githubusercontent.com/akdevlop/akdroidlabs/main/assets/phone-mockup.png"
-             alt="" style="max-width:160px; width:100%; border-radius:12px; box-shadow:0 20px 40px rgba(12,12,40,0.08)">
-        <small style="color:var(--muted)">Contact: <a class="link" href="mailto:quotelyai.team@gmail.com">quotelyai.team@gmail.com</a></small>
-      </div>
-    </section>
+    <div class="links" role="navigation" aria-label="Policy links">
+      <!-- make sure these filenames match your repo files -->
+      <a class="btn primary" href="./privacypolicy.html" title="Privacy Policy">Privacy Policy</a>
+      <a class="btn" href="./termsandconditions.html" title="Terms &amp; Conditions">Terms &amp; Conditions</a>
+    </div>
 
     <footer>
-      <div>© <strong>AKDroid Labs</strong> — <span id="year"></span></div>
-      <div><a class="link" href="https://github.com/akdevlop/akdroidlabs" target="_blank" rel="noopener noreferrer">Repository</a></div>
+      © <span id="year"></span> AKDroid Labs · <a href="mailto:quotelyai.team@gmail.com">quotelyai.team@gmail.com</a>
     </footer>
-  </div>
+  </main>
 
   <script>
-    document.getElementById('year').innerText = new Date().getFullYear();
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
