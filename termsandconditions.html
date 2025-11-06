@@ -21,26 +21,21 @@
       box-shadow: 0 4px 20px rgba(0,0,0,0.08);
       padding: 40px;
     }
-    h1 {
-      color: #3F51B5;
-      text-align: center;
-    }
-    h2 {
-      color: #333;
-      margin-top: 30px;
-    }
-    a {
-      color: #3F51B5;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
+    h1 { color: #3F51B5; text-align: center; }
+    h2 { color: #333; margin-top: 30px; }
+    a { color: #3F51B5; text-decoration: none; }
+    a:hover { text-decoration: underline; }
     footer {
       text-align: center;
       font-size: 14px;
       color: gray;
       margin-top: 40px;
+    }
+    .callout {
+      background: #eef3ff;
+      border: 1px solid #d9e2ff;
+      padding: 12px 14px;
+      border-radius: 8px;
     }
   </style>
 </head>
@@ -48,7 +43,7 @@
   <div class="container">
     
 <h1>Terms and Conditions</h1>
-<p><strong>Last Updated:</strong> November 1, 2025</p>
+<p><strong>Last Updated:</strong> November 6, 2025</p>
 
 <p>Welcome to <strong>QuotelyAI</strong>, developed and managed by <strong>AKDroid Labs</strong>. By downloading, accessing, or using this application (“App”), you agree to be bound by these Terms and Conditions (“Terms”). Please read them carefully before using the App.</p>
 
@@ -65,11 +60,11 @@
 
 <h2>3. AI-Generated Content</h2>
 <p>Some content in QuotelyAI is generated using <strong>Google Cloud’s Gemini API (Vertex AI)</strong>. The AI responses are for entertainment and inspirational purposes only. AKDroid Labs does not guarantee the accuracy, appropriateness, or reliability of AI-generated outputs.</p>
-<p>By using the “Generate Quote” feature, you agree that your text prompt may be securely processed by Google’s servers as per <a href="https://ai.google.dev/terms" target="_blank">Google AI Terms of Service</a>.</p>
+<p>By using the “Generate Quote” feature, you agree that your text prompt may be securely processed by Google’s servers as per <a href="https://ai.google.dev/terms" target="_blank" rel="noopener">Google AI Terms of Service</a>.</p>
 
 <h2>4. Intellectual Property Rights</h2>
 <p>All trademarks, logos, and service marks displayed in the App are the property of AKDroid Labs or respective third parties. You may not use any of these assets without prior written permission.</p>
-<p>Images used in the App are sourced from <a href="https://pixabay.com/" target="_blank">Pixabay</a> under their royalty-free license.</p>
+<p>Images used in the App are sourced from <a href="https://pixabay.com/" target="_blank" rel="noopener">Pixabay</a> under their royalty-free license.</p>
 
 <h2>5. Permissions</h2>
 <p>The App may request limited device permissions to provide key functionality:</p>
@@ -82,10 +77,10 @@
 <h2>6. Third-Party Services</h2>
 <p>The App integrates with trusted third-party providers including:</p>
 <ul>
-  <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Authentication</a> – for user login</li>
-  <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Realtime Database</a> – for app data storage</li>
-  <li><a href="https://ai.google.dev/terms" target="_blank">Google Cloud Vertex AI</a> – for AI quote generation</li>
-  <li><a href="https://pixabay.com/service/terms/" target="_blank">Pixabay</a> – for royalty-free images</li>
+  <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Authentication</a> – for user login</li>
+  <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Realtime Database</a> – for app data storage</li>
+  <li><a href="https://ai.google.dev/terms" target="_blank" rel="noopener">Google Cloud Vertex AI</a> – for AI quote generation</li>
+  <li><a href="https://pixabay.com/service/terms/" target="_blank" rel="noopener">Pixabay</a> – for royalty-free images</li>
 </ul>
 <p>AKDroid Labs is not responsible for the content, policies, or operations of these third-party services.</p>
 
@@ -98,9 +93,46 @@
 <h2>9. Updates and Modifications</h2>
 <p>AKDroid Labs may update the App or these Terms at any time. Changes will take effect immediately upon posting. Continued use of the App after updates means you accept the revised Terms.</p>
 
+<!-- NEW SECTION BEGIN -->
+<h2 id="account-deletion">10. Account Deletion & Data Removal</h2>
+<p>QuotelyAI lets you <strong>delete your account at any time</strong>. Deleting your account permanently removes your authentication profile and user-associated data stored in our Firebase services. This meets Google Play’s user data deletion requirements.</p>
 
-<h2>10. Contact Us</h2>
-<p>For questions, suggestions, or legal inquiries regarding these Terms, please contact:</p>
+<h3>How to delete inside the app (recommended)</h3>
+<ol>
+  <li>Open the app and sign in (if needed).</li>
+  <li>Go to <strong>Profile → Delete Account</strong>.</li>
+  <li>Read the confirmation and tap <strong>Delete</strong>.</li>
+</ol>
+<p>We immediately submit a deletion request to Firebase. Once processed, your account and linked data are permanently removed and cannot be recovered.</p>
+
+<h3>Request deletion via email (web option)</h3>
+<p>If you cannot access the app, email us at
+  <a href="mailto:quotelyai.team@gmail.com?subject=Account%20Deletion%20Request&body=Please%20delete%20my%20QuotelyAI%20account.%0A%0ARegistered%20email%3A%20%0AReason%20(optional)%3A%20%0A%0AI%20understand%20this%20is%20permanent.">
+    quotelyai.team@gmail.com
+  </a>.
+  Include your <strong>registered email</strong> so we can verify ownership. We process email requests within <strong>7 business days</strong>.
+</p>
+
+<h3>What gets deleted</h3>
+<ul>
+  <li><strong>Firebase Authentication user</strong> (email/Google sign-in identity)</li>
+  <li><strong>User data tied to your UID</strong> (e.g., favorites, saved items) in Firebase</li>
+  <li><strong>User-owned files</strong> created by you in Firebase (if any)</li>
+</ul>
+
+<h3>What may be retained</h3>
+<ul>
+  <li><strong>Aggregated or anonymous analytics</strong> that do not personally identify you</li>
+  <li><strong>Operational logs and encrypted backups</strong> retained for a limited time for security, fraud prevention, and reliability. These are purged on rotation and are not used to recreate deleted accounts.</li>
+</ul>
+
+<div class="callout">
+  <strong>Note:</strong> After deletion, your previous data cannot be restored. You may sign up again and create a new account at any time.
+</div>
+<!-- NEW SECTION END -->
+
+<h2>11. Contact Us</h2>
+<p>For questions, suggestions, or legal inquiries regarding these Terms or account deletion, please contact:</p>
 <p><a href="mailto:quotelyai.team@gmail.com">quotelyai.team@gmail.com</a></p>
 
   </div>
