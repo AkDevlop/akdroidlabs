@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>QuotelyAI — Account Deletion</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="How to delete your QuotelyAI account and request full data deletion. Simple in-app steps and an email fallback, compliant with Google Play and Firebase policies." />
+  <meta name="robots" content="index,follow" />
+  <link rel="icon" href="data:,">
+  <style>
+    :root{
+      --bg:#0b1020;
+      --card:#11172a;
+      --text:#e9eefc;
+      --muted:#b8c1d9;
+      --accent1:#06b6d4; /* cyan */
+      --accent2:#7c3aed; /* violet */
+      --ok:#10b981; --warn:#f59e0b; --danger:#ef4444;
+      --maxw:860px;
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      color:var(--text);
+      background: radial-gradient(1200px 800px at 20% -10%, rgba(124,58,237,.25), transparent 60%),
+                  radial-gradient(900px 700px at 100% 10%, rgba(6,182,212,.18), transparent 55%),
+                  linear-gradient(180deg, #0a0f1f, #0b1020 60%, #0b1020);
+    }
+    .wrap{max-width:var(--maxw); margin:48px auto; padding:0 20px}
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01));
+      border:1px solid rgba(255,255,255,.06);
+      border-radius:var(--radius);
+      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+      overflow:hidden;
+    }
+    header{
+      padding:28px 24px;
+      background: linear-gradient(135deg, rgba(6,182,212,.20), rgba(124,58,237,.20));
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    h1{margin:0; font-weight:800; letter-spacing:.2px}
+    .badge{
+      display:inline-block; font-size:12px; padding:6px 10px; border-radius:999px;
+      background:rgba(6,182,212,.18); color:var(--text); border:1px solid rgba(255,255,255,.15);
+      margin-top:8px;
+    }
+    section{padding:22px 24px; border-bottom:1px solid rgba(255,255,255,.06)}
+    h2{margin:0 0 10px 0; font-size:20px}
+    p{margin:8px 0 10px; color:var(--muted); line-height:1.65}
+    ul{margin:8px 0 10px 24px; color:var(--muted); line-height:1.6}
+    code{background:rgba(255,255,255,.06); padding:1px 6px; border-radius:6px}
+    .callout{
+      border-left:4px solid var(--accent1);
+      background:rgba(6,182,212,.08);
+      padding:12px 14px; border-radius:10px; color:var(--text);
+    }
+    .grid{display:grid; gap:16px}
+    @media(min-width:760px){ .grid{grid-template-columns:1fr 1fr} }
+    footer{padding:18px 24px; display:flex; justify-content:space-between; align-items:center; color:var(--muted)}
+    a{color:#a5b4fc; text-decoration:underline}
+    .btn{
+      display:inline-block; padding:10px 14px; border-radius:10px; text-decoration:none; color:#0b1020;
+      background:linear-gradient(135deg, var(--accent1), var(--accent2));
+      border:1px solid rgba(255,255,255,.18); font-weight:600;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <h1>Account Deletion — QuotelyAI</h1>
+        <div class="badge">Last updated: November 6, 2025</div>
+      </header>
+
+      <section>
+        <h2>Summary</h2>
+        <p>
+          You can delete your QuotelyAI account anytime. Deleting your account will permanently remove your authentication profile and user-associated data from our Firebase services.
+          This page explains the <strong>in-app deletion</strong> steps and provides a <strong>web request option</strong> to meet Google Play’s data deletion policy.
+        </p>
+        <div class="callout">
+          <strong>TL;DR:</strong> Delete inside the app at <em>Profile → Delete Account</em>, or email us at
+          <a href="mailto:akdroidlabs@gmail.com?subject=Account%20Deletion%20Request">akdroidlabs@gmail.com</a>.
+          We complete requests within <strong>7 business days</strong>.
+        </div>
+      </section>
+
+      <section>
+        <h2>Delete your account <em>inside the app</em> (recommended)</h2>
+        <ol>
+          <li>Open the QuotelyAI app and sign in (if needed).</li>
+          <li>Go to <strong>Profile → Delete Account</strong>.</li>
+          <li>Read the confirmation, then tap <strong>Delete</strong>.</li>
+        </ol>
+        <p>We immediately submit a deletion request to Firebase. Once processed, your account and linked data are permanently removed and can’t be recovered.</p>
+      </section>
+
+      <section>
+        <h2>Request deletion via email (web option)</h2>
+        <p>If you no longer have the app or cannot access your account, email us:</p>
+        <p>
+          <a class="btn" href="mailto:akdroidlabs@gmail.com?subject=Account%20Deletion%20Request&body=Please%20delete%20my%20QuotelyAI%20account.%0A%0ARegistered%20email%3A%20%0AReason%20(optional)%3A%20%0A%0AI%20understand%20this%20is%20permanent.">Send deletion request</a>
+        </p>
+        <p>Include your <strong>registered email</strong> to help us verify ownership. We may reply to confirm before completing deletion.</p>
+        <p><strong>Processing time:</strong> we aim to complete email requests within <strong>7 business days</strong>.</p>
+      </section>
+
+      <section>
+        <h2>What gets deleted</h2>
+        <div class="grid">
+          <div>
+            <h3>Removed permanently</h3>
+            <ul>
+              <li><strong>Firebase Authentication user</strong> (email/Google sign-in identity)</li>
+              <li><strong>User data tied to your UID</strong> (e.g., favorites, saved items)</li>
+              <li><strong>User-owned files</strong> in Firebase (if any were created by you)</li>
+            </ul>
+          </div>
+          <div>
+            <h3>May be retained (non-identifying)</h3>
+            <ul>
+              <li><strong>Aggregated or anonymous analytics</strong> (not linked to your identity)</li>
+              <li><strong>Operational logs & backups</strong> for security and reliability</li>
+            </ul>
+          </div>
+        </div>
+        <p><em>Backups:</em> some systems keep time-limited encrypted backups. When backups expire or are rotated, your deleted data is purged. We do not restore deleted accounts.</p>
+      </section>
+
+      <section>
+        <h2>If you re-install or sign up again</h2>
+        <p>After deletion, your previous account and data cannot be recovered. You can create a new account anytime using the app’s sign-in screen.</p>
+      </section>
+
+      <section>
+        <h2>Verification & safety</h2>
+        <ul>
+          <li>We may ask you to confirm your registered email to prevent unauthorized requests.</li>
+          <li>We act on in-app deletions immediately; email requests are processed within 7 business days.</li>
+          <li>We follow Google Play’s data deletion requirements and Firebase best practices.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Contact</h2>
+        <p>Questions or issues? Contact <a href="mailto:akdroidlabs@gmail.com">akdroidlabs@gmail.com</a>.</p>
+        <p>Developer: <strong>AKDroid Labs</strong></p>
+      </section>
+
+      <footer>
+        <span>© <span id="y"></span> AKDroid Labs</span>
+        <a href="/privacy.html">Privacy Policy</a>
+      </footer>
+    </div>
+  </div>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
