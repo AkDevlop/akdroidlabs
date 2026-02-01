@@ -3,52 +3,102 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>AKDroid Labs — Policies</title>
-  <meta name="description" content="AKDroid Labs — Official policy links for QuotelyAI." />
+  <title>AKDroid Labs — App Policies Hub</title>
+  <meta name="description" content="Official privacy and terms documentation for AKDroid Labs applications." />
   <style>
-    :root{
-      --bg:#f6f8fb; --card:#ffffff; --accent:#3F51B5; --muted:#6b7280;
+    :root {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --accent-quotely: #3F51B5;
+      --accent-auralog: #6200ee;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0; font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      background:linear-gradient(180deg,#fafafa,#f2f4f8);
-      color:#111827; display:flex; align-items:center; justify-content:center; padding:24px;
-      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg); color: var(--text-main);
+      display: flex; flex-direction: column; align-items: center; min-height: 100vh; padding: 40px 20px;
     }
-    .wrap{
-      width:100%; max-width:720px; background:var(--card); border-radius:14px; padding:28px;
-      box-shadow:0 10px 30px rgba(16,24,40,.08); text-align:center;
+    .header { text-align: center; margin-bottom: 40px; }
+    .header h1 { margin: 0; font-size: 28px; letter-spacing: -0.5px; color: var(--text-main); }
+    .header p { margin: 8px 0 0; color: var(--text-muted); font-size: 16px; }
+
+    .app-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px; width: 100%; max-width: 900px;
     }
-    h1{margin:0 0 8px; color:var(--accent); font-size:22px; letter-spacing:-.2px;}
-    p.lead{margin:0; color:var(--muted); font-size:14px;}
-    .links{display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin-top:22px;}
-    a.btn{
-      display:inline-block; padding:12px 16px; border-radius:10px; text-decoration:none; font-weight:600; font-size:14px;
-      border:1px solid #e6e9ef; color:var(--accent); background:#fff;
+
+    .app-card {
+      background: var(--card); border: 1px solid var(--border); border-radius: 16px;
+      padding: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex; flex-direction: column; align-items: center;
     }
-    a.btn.primary{
-      background:var(--accent); color:#fff; border-color:var(--accent);
+    .app-card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.06); }
+
+    .app-icon {
+      width: 64px; height: 64px; border-radius: 14px; margin-bottom: 16px;
+      display: flex; align-items: center; justify-content: center; font-size: 32px;
     }
-    footer{margin-top:18px; color:var(--muted); font-size:12px;}
+    .icon-quotely { background: #eef2ff; border: 1px solid #c7d2fe; }
+    .icon-auralog { background: #f5f3ff; border: 1px solid #ddd6fe; }
+
+    .app-card h2 { margin: 0 0 8px; font-size: 20px; text-align: center; }
+    .app-card p { margin: 0 0 20px; font-size: 14px; color: var(--text-muted); text-align: center; }
+
+    .links { display: flex; flex-direction: column; gap: 10px; width: 100%; }
+    .btn {
+      display: block; text-align: center; padding: 12px; border-radius: 8px;
+      text-decoration: none; font-weight: 600; font-size: 14px;
+      transition: all 0.2s; border: 1px solid var(--border);
+    }
+    
+    /* Quotely Colors */
+    .btn-quotely { color: var(--accent-quotely); background: transparent; }
+    .btn-quotely:hover { background: var(--accent-quotely); color: #fff; }
+
+    /* AuraLog Colors */
+    .btn-auralog { color: var(--accent-auralog); background: transparent; }
+    .btn-auralog:hover { background: var(--accent-auralog); color: #fff; }
+
+    footer { margin-top: auto; padding: 40px 0 20px; text-align: center; color: var(--text-muted); font-size: 13px; border-top: 1px solid var(--border); width: 100%; max-width: 900px; }
+    footer a { color: var(--text-main); text-decoration: none; font-weight: 500; }
   </style>
 </head>
 <body>
-  <main class="wrap" role="main" aria-label="AKDroid Labs policy links">
+
+  <header class="header">
     <h1>AKDroid Labs</h1>
-    <p class="lead">Official links for QuotelyAI policies</p>
+    <p>Compliance & Legal Documentation Hub</p>
+  </header>
 
-    <div class="links" role="navigation" aria-label="Policy links">
-      <!-- make sure these filenames match your repo files -->
-      <a class="btn primary" href="https://akdevlop.github.io/akdroidlabs/privacypolicy.html" title="Privacy Policy">Privacy Policy</a>
-      <a class="btn" href="https://akdevlop.github.io/akdroidlabs/termsandconditions.html" title="Terms &amp; Conditions">Terms &amp; Conditions</a>
-    </div>
+  <main class="app-grid">
+    <section class="app-card">
+      <div class="app-icon icon-quotely">📝</div>
+      <h2>QuotelyAI</h2>
+      <p>Inspiration and Quote Management</p>
+      <div class="links">
+        <a class="btn btn-quotely" href="privacypolicy.html">Privacy Policy</a>
+        <a class="btn btn-quotely" href="termsandconditions.html">Terms & Conditions</a>
+      </div>
+    </section>
 
-    <footer>
-      © <span id="year"></span> AKDroid Labs · <a href="mailto:quotelyai.team@gmail.com">quotelyai.team@gmail.com</a>
-    </footer>
+    <section class="app-card">
+      <div class="app-icon icon-auralog">✨</div>
+      <h2>AuraLog</h2>
+      <p>Mood & Energy Tracker</p>
+      <div class="links">
+        <a class="btn btn-auralog" href="auralogprivacypolicy.html">Privacy Policy</a>
+        <a class="btn btn-auralog" style="opacity: 0.5; pointer-events: none;" href="#">Terms coming soon</a>
+      </div>
+    </section>
   </main>
+
+  <footer>
+    <p>© <span id="year"></span> AKDroid Labs · Support: <a href="mailto:akdroid.labs@gmail.com">akdroid.labs@gmail.com</a></p>
+  </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
